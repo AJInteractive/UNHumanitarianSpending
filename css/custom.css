@@ -1,0 +1,368 @@
+.nextimages{
+  display:none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.top {
+    min-height:160px;
+    line-height: 1.8;
+}
+
+#footer {
+  position: relative;
+  height:100%;
+  line-height: 2;
+  clear: both;
+  text-align: center;
+}
+
+.bottom-footer {
+  width: 100%;
+  z-index:99999;
+  background:#111111;
+  height:40px;
+  bottom:0;
+  position:fixed;
+}
+
+
+#section1 {
+  color: #fff;
+  height: 100%;
+  display: table-row;
+  background-image: url(../img/L3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+#section2 {
+  color: #fff;
+  height: 100%;
+  display: table-row;
+  background-image: url(../img/L4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.9;
+}
+.headingone, .headingtwo {
+  padding: 10px;
+  font-size: 3em;
+  font-weight: 900;
+  text-shadow: 1px 1px #333333;
+}
+.headingthree {
+  display: none;
+  font-size: 2em;
+  font-weight: 900;
+}
+.centerboxtext {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999;
+}
+.scorecard {
+}
+.modal.fade:not(.in) .modal-dialog {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+#myModal {
+  top: 80%;
+  outline: none;
+}
+.modal-content {
+  background-color: green;
+}
+.modal-text {
+  color: #ffffff;
+  padding: 20px;
+  padding-top: 25px;
+  margin: 0;
+  vertical-align: text-bottom;
+}
+.try-again {
+  color: #eeeeee;
+  padding-bottom: 20px;
+  margin: 0;
+  vertical-align: text-bottom;
+}
+.moneyone {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.moneytwo {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+#section1:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#section2:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.moneyone, .moneytwo {
+  color: #fb9d04;
+  font-size: 6em;
+}
+h1, .headingone, .headingtwo {
+  font-weight: 600;
+  font-size: 2.3em;
+}
+#or {
+  position: absolute;
+  background: url(../img/or.png);
+  height: 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  opacity: 0.7;
+  top: 50%;
+  z-index: 9999;
+  right: 0;
+  margin-top:-120px;
+}
+.outstanding {
+  background-color: #FF5722;
+  width: 90%;
+  float: right;
+  height: 8px;
+  border: 1px solid #000000;
+  text-align: right;
+}
+.received {
+  background-color: #4CAF50;
+  width: 10%;
+  float: left;
+  height: 8px;
+  border: 1px solid #666666;
+  text-align: left;
+}
+.receivedfunds1, .outstandingfunds1 {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size:0.9em;
+}
+.barchart {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+h5{
+  font-size:1.2em;
+}
+/*.headingone, .headingtwo {
+  font-weight: 600;
+  display: inline-block;
+  min-height: 200px;
+}*/
+.infotwo, .infoone {
+  width: 80%;
+  line-height: 150%;
+  margin: 0 auto;
+}
+.moneytwo, .moneyone {
+  position: absolute;
+  top: 50%;
+  z-index: -5;
+  font-weight: bold;
+}
+.navbarbottom {
+  background: #000;
+}
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #section1, #section2 {
+      min-height: 280px;
+    }
+    .un {
+      font-size: 10px;
+    }
+    h2.headingtwo, h2.headingone {
+      font-size: 1em;
+      min-height: 60px;
+      padding-top: 0;
+    }
+    .infotwo, .infoone {
+      font-size: 0.7em;
+    }
+    .barchart p {
+      font-size: 10px;
+      width: 50%;
+      float: right;
+      display: inline-block;
+    }
+    .barchart {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    .moneytwo, .moneyone {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .bottom {
+      height: 80%;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    h2.headingtwo, h2.headingone {
+      font-size: 1em;
+      min-height: 90px;
+    }
+    .infotwo, .infoone {
+      font-size: 0.7em;
+    }
+    .barchart p {
+      font-size: 10px;
+      width: 50%;
+      float: right;
+      display: inline-block;
+    }
+    .barchart {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    .moneytwo, .moneyone {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .bottom {
+      height: 100%;
+    }
+}
+/* ----------- Tablets ----------- */
+
+@media only screen
+and (max-width: 4000px)
+{
+  h1, .headingone, .headingtwo{font-size:4em}
+  .moneyone, .moneytwo{font-size:4em}
+  h3 {font-size:2.4em}
+  h5 {font-size:1.8em}
+}
+
+
+@media only screen
+and (max-width: 1600px)
+{
+  h1, .headingone, .headingtwo{font-size:3em}
+  .moneyone, .moneytwo{font-size:3em}
+  h3 {font-size:2em}
+  h5 {font-size:1.4em}
+}
+
+
+@media only screen
+and (max-width: 940px)
+{
+  h1, .headingone, .headingtwo{font-size:1.8em}
+  .moneyone, .moneytwo{font-size:1.8em}
+  h3 {font-size:1.4em}
+  h5 {font-size:1.1em}
+}
+
+@media only screen and (max-width: 768px){
+  h1, .headingone, .headingtwo{font-size:1.3em}
+  .moneyone, .moneytwo{font-size:2em}
+  h3 {font-size:0.9em}
+  h5 {font-size:0.8em}
+}
