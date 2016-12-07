@@ -17,7 +17,7 @@ $(document).ready(function() {
     $(".receivedfunds").html(leftdata[leftdata.length - 2].value);
     $(".headingtwo").html(rightdata[rightdata.length - 2].question);
     $(".infotwo").html(rightdata[rightdata.length - 2].hint);
-    $(".moneytwo").html();
+    // $(".moneytwo").html();
     $("#section1").css("background-image", "url(" + leftdata[leftdata.length - 2].image + ")");
     $("#section2").css("background-image", "url(" + rightdata[rightdata.length - 2].image + ")");
     // preload the next images
@@ -64,8 +64,11 @@ $(document).ready(function() {
       switch (whichbutton) {
         case "left":
           if (leftdata[currentleft - 1].money >= rightdata[currentright - 1].money) {
-            $(".moneytwo").html(rightdata[currentright - 1].value);
-            $(".moneyone").html(leftdata[currentleft - 1].value);
+            setTimeout(function() {
+              $(".moneytwo").html(rightdata[currentright - 1].value);
+              $(".moneyone").html(leftdata[currentleft - 1].value);
+            }, 1000)
+
             $('.modal-content').css('background-color', 'green').find('.modal-text').text("CORRECT");
             $('.try-again').text('Loading next question');
             $('#myModal').modal('show');
@@ -103,10 +106,13 @@ $(document).ready(function() {
               $(".moneyone").html("");
               isHighScore(score);
 
-            }, 3000);
+            }, 4000);
           } else {
-            $(".moneytwo").html(rightdata[currentright - 1].value);
-            $(".moneyone").html(leftdata[currentleft - 1].value);
+            setTimeout(function() {
+              $(".moneytwo").html(rightdata[currentright - 1].value);
+              $(".moneyone").html(leftdata[currentleft - 1].value);
+            }, 1000)
+
             $('.modal-content').css('background-color', 'red').find('.modal-text').text("WRONG");
             $('.try-again').text('Please try again');
             $('#myModal').modal('show');
@@ -134,13 +140,16 @@ $(document).ready(function() {
               $("#score").html(score);
               $(".moneytwo").html("");
               $(".moneyone").html("");
-            }, 3000);
+            }, 4000);
           }
           break;
         case "right":
           if (rightdata[currentright - 1].money >= leftdata[currentleft - 1].money) {
-            $(".moneytwo").html(rightdata[currentright - 1].value);
-            $(".moneyone").html(leftdata[currentleft - 1].value);
+            setTimeout(function() {
+              $(".moneytwo").html(rightdata[currentright - 1].value);
+              $(".moneyone").html(leftdata[currentleft - 1].value);
+            }, 1000)
+
             $('.modal-content').css('background-color', 'green').find('.modal-text').text("CORRECT");
             $('.try-again').text('Loading next question');
             $('#myModal').modal('show');
@@ -178,11 +187,14 @@ $(document).ready(function() {
               $(".moneytwo").html("");
               $(".moneyone").html("");
               isHighScore(score);
-            }, 3000);
+            }, 4000);
 
           } else {
-            $(".moneytwo").html(rightdata[currentright - 1].value);
-            $(".moneyone").html(leftdata[currentright - 1].value);
+            setTimeout(function() {
+              $(".moneytwo").html(rightdata[currentright - 1].value);
+              $(".moneyone").html(leftdata[currentleft - 1].value);
+            }, 1000)
+
             $('.modal-content').css('background-color', 'red').find('.modal-text').text("WRONG");
             $('.try-again').text('Please try again');
             $('#myModal').modal('show');
@@ -210,7 +222,7 @@ $(document).ready(function() {
               score = 0;
               $("#score").html(score);
               $(".moneyone").html("");
-            }, 3000);
+            }, 4000);
           }
           break;
       }
